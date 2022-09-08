@@ -12,7 +12,25 @@
     5. Media Queries
 ////////////////////////*/
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+:root {
+    --font-roboto: "roboto", sans-serif;
+    --font-merryweather: "merriweather", serif;
+    --main-purple: #5722CD;
+    --main-blue: #4845E4;
+    --main-pink: #ED4385;
+    --main-black: #0C0C0C;
+    --main-light-purple: #F2F0FF;
+    --backgound-color: #F3F6F9;
+    --service-tile: #7A7A7A;
+}
+
 /* ------------------------------- 1. Global Styles -------------------------------- */
+* {
+    margin: 0;
+}
 
 /* ------------------------------- 2. Typography ----------------------------------- */
 
@@ -26,6 +44,44 @@
 
 /* --------------- 4.1 Header ------------------------- */
 
+header {
+    background: rgb(134,69,228);
+    background: linear-gradient(315deg, rgba(134,69,228,1) 0%, rgba(87,34,205,1) 100%);
+    color: var(--main-light-purple);
+
+    border: 1px solid black;
+}
+
+.header-list {
+    list-style: none;
+    font-family: var(--font-roboto);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    border: 1px solid black;
+}
+.header-list > li {
+    padding-right: 40px;
+    padding-top: 30px;
+
+    border: 1px solid black;
+}
+
+h1 {
+    font-family: var(--font-merryweather);
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+    box-sizing: border-box;
+    margin-left: 200px;
+    margin-right: 200px;
+
+    border: 1px solid black;
+}
 /* --------------- 4.2 Introduction ------------------- */
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
