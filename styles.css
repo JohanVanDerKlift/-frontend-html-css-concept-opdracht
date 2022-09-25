@@ -208,7 +208,7 @@ h2 {
     padding-top: 250px;
     padding-bottom: 100px;
     background-color: var(--backgound-color);
-    z-index: -2;
+    z-index: 1;
     overflow: hidden;
 }
 
@@ -221,7 +221,7 @@ h2 {
     position: absolute;
     top: 0;
     max-width: 100%;
-    z-index: -1;
+    z-index: 2;
 }
 
 .projects-section::after {
@@ -255,6 +255,7 @@ h2 {
     flex-direction: column;
     flex-shrink: 0;
     justify-content: center;
+    z-index: 3;
 }
 
 .project-title::after {
@@ -308,6 +309,7 @@ h2 {
     flex-grow: 0;
     flex-shrink: 1;
     padding: 40px;
+    z-index: 3;
 }
 
 .work-image {
