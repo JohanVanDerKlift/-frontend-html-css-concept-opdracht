@@ -40,6 +40,7 @@
     --main-light-purple: #F2F0FF;
     --backgound-color: #F3F6F9;
     --service-tile: #7A7A7A;
+    --twidth: calc(100vw / 2);
 }
 /* --------------- 3.2 Other --------------------------- */
 
@@ -48,30 +49,22 @@
 /* --------------- 4.1 Header ------------------------- */
 header {
     position: relative;
-    background: rgb(72,69,228);
-    background: linear-gradient(90deg, rgba(72,69,228,1) 0%, rgba(85,0,255,1) 75%);
+    background-image: url("./assets/noise-texture.png"),
+        linear-gradient(90deg, rgba(72,69,228,1) 0%, rgba(85,0,255,1) 75%);
     color: var(--main-light-purple);
+    overflow: hidden;
 }
 
-/*header::before {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    background-image: url("./assets/noise-texture.png");*/
-/*    background-size: cover;*/
-/*    background-position: center;*/
-/*}*/
-
 header::after {
-    border-top: 20px solid transparent;
-    border-right: 50vw solid transparent;
-    border-bottom: 20px solid white;
-    border-left: 50vw solid white;
+    border-left: 100vw solid white;
+    border-top: 40px solid transparent;
     width: 0;
     height: 0;
     bottom: 0;
     content: "";
     display: block;
     position: absolute;
+    /*overflow: hidden;*/
 }
 
 .header-list {
@@ -113,7 +106,6 @@ h2 {
     text-align: center;
     max-width: 500px;
     font-family: var(--font-roboto);
-    /*letter-spacing: 1px;*/
     font-size: 25px;
     font-weight: lighter;
     margin-top: 20px;
@@ -162,11 +154,24 @@ h2 {
     position: relative;
     justify-content: center;
     padding-bottom: 50px;
+    overflow: hidden;
+}
+
+.top-section::before {
+    border-left: 100vw solid var(--backgound-color);
+    border-top: 40px solid transparent;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    content: "";
+    display: block;
+    position: absolute;
 }
 
 .top-section::after {
     display: flex;
     justify-content: center;
+    flex-shrink: 1;
     content: "hello";
     font-family: var(--font-roboto);
     font-size: 350px;
@@ -198,42 +203,32 @@ h2 {
 
 /* --------------- 4.3 Projects ------------------------- */
 .projects-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
     padding-top: 250px;
     padding-bottom: 100px;
     background-color: var(--backgound-color);
+    z-index: -2;
+    overflow: hidden;
 }
 
 .projects-section::before {
-    border-top: 20px solid white;
-    border-right: 50vw solid white;
-    border-bottom: 20px solid transparent;
-    border-left: 50vw solid transparent;
-    width: 0;
-    height: 0;
-    top: 0;
-    content: "";
-    display: block;
-    position: absolute;
-}
-
-#projects-section::before {
-    display: flex;
-    justify-content: center;
     content: "work";
     font-family: var(--font-roboto);
     font-size: 450px;
     font-weight: bold;
     color: white;
+    position: absolute;
+    top: 0;
+    max-width: 100%;
     z-index: -1;
 }
 
-
 .projects-section::after {
-    border-top: 20px solid transparent;
-    border-right: 50vw solid transparent;
-    border-bottom: 20px solid white;
-    border-left: 50vw solid white;
+    border-left: 100vw solid white;
+    border-top: 40px solid transparent;
     width: 0;
     height: 0;
     bottom: 0;
@@ -326,18 +321,18 @@ h2 {
 .section-services {
     display: flex;
     justify-content: center;
-
 }
 
 .section-services::before {
+    position: absolute;
     display: flex;
     justify-content: center;
+    flex-grow: 0;
+    flex-shrink: 1;
     content: "services";
     font-family: var(--font-roboto);
     font-size: 250px;
     font-weight: bold;
-    max-width: 100px;
-    position: absolute;
     color: #F4F3FE;
     z-index: -1;
 }
@@ -385,16 +380,15 @@ h2 {
     display: flex;
     position: relative;
     justify-content: center;
-    background: rgb(72,69,228);
-    background: linear-gradient(90deg, rgba(72,69,228,1) 0%, rgba(85,0,255,1) 75%);
+    background-image: url("./assets/noise-texture.png"),
+        linear-gradient(90deg, rgba(72,69,228,1) 0%, rgba(85,0,255,1) 75%);
     padding: 100px;
+    overflow: hidden;
 }
 
 .form-section-wrapper::before {
-    border-top: 20px solid white;
-    border-right: 50vw solid white;
-    border-bottom: 20px solid transparent;
-    border-left: 50vw solid transparent;
+    border-right: 100vw solid white;
+    border-bottom: 40px solid transparent;
     width: 0;
     height: 0;
     top: 0;
