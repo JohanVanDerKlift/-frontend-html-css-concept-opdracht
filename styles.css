@@ -64,7 +64,6 @@ header::after {
     content: "";
     display: block;
     position: absolute;
-    /*overflow: hidden;*/
 }
 
 .header-list {
@@ -176,7 +175,6 @@ h2 {
     font-family: var(--font-roboto);
     font-size: 350px;
     font-weight: bold;
-    max-width: 100px;
     position: absolute;
     color: #F4F3FE;
     z-index: -1;
@@ -321,19 +319,19 @@ h2 {
 .section-services {
     display: flex;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .section-services::before {
-    position: absolute;
     display: flex;
     justify-content: center;
-    flex-grow: 0;
-    flex-shrink: 1;
     content: "services";
     font-family: var(--font-roboto);
     font-size: 250px;
     font-weight: bold;
     color: #F4F3FE;
+    position: absolute;
     z-index: -1;
 }
 
