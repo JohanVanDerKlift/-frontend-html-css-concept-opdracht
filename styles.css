@@ -49,8 +49,29 @@
 header {
     position: relative;
     background: rgb(72,69,228);
-    background: linear-gradient(133deg, rgba(72,69,228,1) 0%, rgba(98,0,255,1) 100%);
+    background: linear-gradient(90deg, rgba(72,69,228,1) 0%, rgba(85,0,255,1) 75%);
     color: var(--main-light-purple);
+}
+
+/*header::before {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    background-image: url("./assets/noise-texture.png");*/
+/*    background-size: cover;*/
+/*    background-position: center;*/
+/*}*/
+
+header::after {
+    border-top: 20px solid transparent;
+    border-right: 50vw solid transparent;
+    border-bottom: 20px solid white;
+    border-left: 50vw solid white;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    content: "";
+    display: block;
+    position: absolute;
 }
 
 .header-list {
@@ -131,18 +152,36 @@ h2 {
     margin-top: 150px;
 }
 
+.triangle-wrapper {
+    position: relative;
+}
+
 /* --------------- 4.2 Introduction ------------------------- */
 .top-section {
     display: flex;
+    position: relative;
     justify-content: center;
     padding-bottom: 50px;
+}
+
+.top-section::after {
+    display: flex;
+    justify-content: center;
+    content: "hello";
+    font-family: var(--font-roboto);
+    font-size: 350px;
+    font-weight: bold;
+    max-width: 100px;
+    position: absolute;
+    color: #F4F3FE;
+    z-index: -1;
 }
 
 .top-text-box {
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 100px;
-    max-width: 720px;
+    max-width: 650px;
     text-align: center;
 }
 
@@ -159,9 +198,48 @@ h2 {
 
 /* --------------- 4.3 Projects ------------------------- */
 .projects-section {
-    padding-top: 50px;
+    position: relative;
+    padding-top: 250px;
     padding-bottom: 100px;
     background-color: var(--backgound-color);
+}
+
+.projects-section::before {
+    border-top: 20px solid white;
+    border-right: 50vw solid white;
+    border-bottom: 20px solid transparent;
+    border-left: 50vw solid transparent;
+    width: 0;
+    height: 0;
+    top: 0;
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+#projects-section::before {
+    display: flex;
+    justify-content: center;
+    content: "work";
+    font-family: var(--font-roboto);
+    font-size: 450px;
+    font-weight: bold;
+    color: white;
+    z-index: -1;
+}
+
+
+.projects-section::after {
+    border-top: 20px solid transparent;
+    border-right: 50vw solid transparent;
+    border-bottom: 20px solid white;
+    border-left: 50vw solid white;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    content: "";
+    display: block;
+    position: absolute;
 }
 
 .h2-purple {
@@ -186,6 +264,12 @@ h2 {
     justify-content: center;
 }
 
+.project-title::after {
+    display: flex;
+    content: url(./assets/squiggle_line.svg);
+    margin-top: 20px;
+}
+
 .squiggle-line {
     margin-top: 30px;
     max-width: 50px;
@@ -200,6 +284,7 @@ h2 {
 }
 
 .project-link{
+    display: flex;
     color: var(--main-purple);
     font-family: var(--font-roboto);
     text-decoration: none;
@@ -207,6 +292,22 @@ h2 {
     font-size: 13px;
     font-weight: bold;
     letter-spacing: 1px;
+    pointer-events: all;
+}
+
+.project-link::after {
+    display: flex;
+    content: "";
+    width: 20px;
+    height: 0;
+    border-top: 2px solid var(--main-purple);
+    margin-left: 20px;
+    margin-top: 7px;
+    transition: width .35s ease-in-out;
+}
+
+.project-link:hover::after {
+    width: 100px;
 }
 
 .image-wrapper {
@@ -225,6 +326,20 @@ h2 {
 .section-services {
     display: flex;
     justify-content: center;
+
+}
+
+.section-services::before {
+    display: flex;
+    justify-content: center;
+    content: "services";
+    font-family: var(--font-roboto);
+    font-size: 250px;
+    font-weight: bold;
+    max-width: 100px;
+    position: absolute;
+    color: #F4F3FE;
+    z-index: -1;
 }
 
 .section-services-wrapper {
@@ -233,7 +348,8 @@ h2 {
     max-width: 1400px;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 70px;
+    padding-top: 200px;
+    padding-bottom: 70px;
 }
 
 .service-article {
@@ -245,6 +361,7 @@ h2 {
     margin: 18px;
     padding: 30px;
     box-shadow: 0 5px 15px #C1C3C6;
+    background-color: white;
 }
 
 .services-icon {
@@ -266,10 +383,24 @@ h2 {
 /* --------------- 4.5 Contact form ------------------------- */
 .form-section-wrapper {
     display: flex;
+    position: relative;
     justify-content: center;
     background: rgb(72,69,228);
-    background: linear-gradient(133deg, rgba(72,69,228,1) 0%, rgba(98,0,255,1) 100%);
+    background: linear-gradient(90deg, rgba(72,69,228,1) 0%, rgba(85,0,255,1) 75%);
     padding: 100px;
+}
+
+.form-section-wrapper::before {
+    border-top: 20px solid white;
+    border-right: 50vw solid white;
+    border-bottom: 20px solid transparent;
+    border-left: 50vw solid transparent;
+    width: 0;
+    height: 0;
+    top: 0;
+    content: "";
+    display: block;
+    position: absolute;
 }
 
 .form-section {
