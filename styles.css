@@ -42,6 +42,7 @@
     --service-tile: #7A7A7A;
     --twidth: calc(100vw / 2);
 }
+
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
@@ -50,7 +51,7 @@
 header {
     position: relative;
     background-image: url("./assets/noise-texture.png"),
-        linear-gradient(90deg, rgba(72,69,228,1) 0%, rgba(85,0,255,1) 75%);
+    linear-gradient(90deg, rgba(72,69,228,1) 0%, rgba(85,0,255,1) 75%);
     color: var(--main-light-purple);
     overflow: hidden;
 }
@@ -381,7 +382,7 @@ h2 {
     position: relative;
     justify-content: center;
     background-image: url("./assets/noise-texture.png"),
-        linear-gradient(90deg, rgba(72,69,228,1) 0%, rgba(85,0,255,1) 75%);
+    linear-gradient(90deg, rgba(72,69,228,1) 0%, rgba(85,0,255,1) 75%);
     padding: 100px;
     overflow: hidden;
 }
